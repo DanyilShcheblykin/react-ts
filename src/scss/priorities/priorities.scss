@@ -1,0 +1,34 @@
+// Inline styles - Example: <h1 style="color: pink;">
+// IDs - Example: #navbar
+// Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+// Elements and pseudo-elements - Example: h1, ::before
+
+// Если у блока два класса приоритет будет у того который в html обьявлен последним без разницы как это прописано в css
+
+.mama {
+    color: red;
+}
+
+.papa {
+    color: orange;
+}
+
+
+h1 {
+    color: blue;
+}
+
+#mama {
+    color: green;
+}
+
+.link {
+    color: rebeccapurple;
+}
+
+a[href] {
+    color: blue;
+}
+a{
+    color: red;
+}

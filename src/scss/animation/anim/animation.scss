@@ -1,0 +1,17 @@
+// animation: <animation-name> <animation-duration> <animation-timing-function> <animation-delay> <animation-iteration-count> <animation-direction>;
+
+// animation-timing-function - ease , liner ......
+// animation-iteration-count	Specifies the number of times an animation should be played
+// animation-direction - reverse
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation: rotate 2s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }

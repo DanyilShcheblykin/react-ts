@@ -1,0 +1,50 @@
+// transition: <property> <duration> <timing-function> <delay>;
+
+// ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+// linear - specifies a transition effect with the same speed from start to end
+// ease-in - specifies a transition effect with a slow start
+// ease-out - specifies a transition effect with a slow end
+// ease-in-out - specifies a transition effect with a slow start and end
+
+.box {
+    width: 100px;
+    height: 100px;
+    transition: rotate 2s ease;
+    background-color: red;
+}
+
+.box:hover {
+    transform: rotate(45deg);
+}
+
+.testAnim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 300px;
+    height: 300px;
+    font-size: 25px;
+    position: relative;
+
+    h1 {
+        z-index: 1;
+    }
+}
+
+.testAnimInside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: aqua;
+    transition: width 3s; // должны писать это там где хотим сделат анимацию 
+}
+
+.testAnim:hover {
+    .testAnimInside {
+        width: 100%;
+    }
+}

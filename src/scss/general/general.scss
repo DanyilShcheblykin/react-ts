@@ -1,0 +1,15 @@
+.box{
+    background-color: red;
+    padding: 10px;
+    box-sizing: border-box; // padding doesnt included to block size but if to use  box-sizing i will include
+}
+
+.inline-block{
+    display: inline-block;// отличается от inline тем что можно set width , height и padding правилбно работает , а от block отличается тем что на той же строке размещены 
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin-right: 10px;
+    box-sizing: border-box;
+
+}

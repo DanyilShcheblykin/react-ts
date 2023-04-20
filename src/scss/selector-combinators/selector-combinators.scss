@@ -1,0 +1,43 @@
+// .main p{
+//     color: rgb(57, 209, 57); //берет все p внутри
+// }
+
+.main>p {
+    //берет только те p которые вложеные но только один раз 
+    color: red;
+}
+
+p.block {
+    //выберает все p у которых класс .block
+    background-color: orange;
+}
+
+img~p {
+    // берет не вложеные p , а все p которые идут после img и находятся на одном уровне 
+    color: red;
+}
+
+.mama+p {
+    //обязательно должен идти сразу после .mama на одном уровне
+    color: blue;
+}
+
+/* Select all <a> elements with a href attribute */
+a[href] {
+    color: blue;
+}
+
+/* Select all <input> elements with a type attribute set to "text" */
+input[type="text"] {
+    background-color: #f0f0f0;
+}
+
+/* Select all <img> elements with an alt attribute that contains the word "cat" */
+img[alt~="cat"] {
+    border: 1px solid black;
+}
+
+/* Select all <option> elements with a value attribute that starts with "fr" */
+option[value|="fr"] {
+    font-style: italic;
+}
