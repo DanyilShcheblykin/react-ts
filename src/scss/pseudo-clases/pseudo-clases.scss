@@ -16,6 +16,7 @@
 
 li:first-child {
     //выберает первый li из всех li который вложены в какой-то блок 
+    // choode first li that is inside of some block
     border: 1px solid red;
 }
 
@@ -26,6 +27,7 @@ label {
 
 input:focus {
     // когда начинает в input писать что-то
+    // when you start to write something in input
     background-color: lightblue;
 }
 
@@ -35,8 +37,8 @@ select:focus {
 
 .mama {
     p {
-
         // всем p внутри .mama делает green кроме последнего 
+        // make all p inside class .mama green insted of last one
         &:not(:last-child) {
             color: green;
         }
@@ -44,6 +46,8 @@ select:focus {
 
 }
 
-.nth > p:nth-child(2) { //выбирает 2 p
+.nth > p:nth-child(2) { 
+    //выбирает 2 p
+    //choose the second p
     color: red;
   }

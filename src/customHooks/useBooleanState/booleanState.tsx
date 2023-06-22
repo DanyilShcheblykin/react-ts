@@ -10,12 +10,16 @@ const BooleanState = () => {
 
     const [state, toggle] = useBooleanState2()
 
-    console.log(state)
+    const [counter, setCounter] = useState<number>(0)
+
+    // if we change counter Button component wont rerender because we wraped it in memo and the prop function we wraped in callBack , if to delete useCallBack or memo will be rerender
 
     return (
         <div>
             <Button onClick={toggle}>Toogle</Button>
             {state && <h1 style={{ color: "red" }}>Show</h1>}
+            <div>Number : {counter}</div>
+            <button onClick={() => setCounter(prev => ++prev)}>Add counetr</button>
         </div>
     );
 };
@@ -28,3 +32,4 @@ const Button = memo((props: DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLBut
         <button {...props}></button>
     )
 }) //memo что бы не было rerender если props не меняются 
+

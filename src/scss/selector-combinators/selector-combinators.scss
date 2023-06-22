@@ -4,21 +4,25 @@
 
 .main>p {
     //берет только те p которые вложеные но только один раз 
+    //choose <p> wich is nested but only for one level
     color: red;
 }
 
 p.block {
     //выберает все p у которых класс .block
+    // choose all p wich class is .block
     background-color: orange;
 }
 
 img~p {
     // берет не вложеные p , а все p которые идут после img и находятся на одном уровне 
+    // choose all p wich are on the same nesting as img
     color: red;
 }
 
 .mama+p {
     //обязательно должен идти сразу после .mama на одном уровне
+    // choose p wich is exactly after .mama class 
     color: blue;
 }
 

@@ -10,13 +10,12 @@ const UseEffect = () => {
 
     const sum = useCallback(() => {
         return state + state2
-    }, [state, state2])//если использовать без зависимостей тогда useEffect , будет срабатывать на кажом изменении input так как функция будет пересобираться каждый раз 
-    //если использовать useCallback useEffect будет срабатывать только когда sum , будет вызвана 
+    }, [state , state])
 
     useEffect(() => {
         console.log("hello")
         setRes(sum())
-    }, [sum])
+    }, [sum]) //will execute when sum change
 
     return (
         <>

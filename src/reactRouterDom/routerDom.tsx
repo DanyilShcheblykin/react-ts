@@ -14,8 +14,7 @@ const RouterDom = () => {
                 <Route path='papa' element={<Papa></Papa>}></Route>
             </Routes>
         </>
-
     )
 }
 
-export default RouterDom
+export default RouterDom 

@@ -4,7 +4,7 @@
 // Elements and pseudo-elements - Example: h1, ::before
 
 // Если у блока два класса приоритет будет у того который в html обьявлен последним без разницы как это прописано в css
-
+// if block has got two classes will use that is the last one in html
 .mama {
     color: red;
 }
@@ -12,7 +12,6 @@
 .papa {
     color: orange;
 }
-
 
 h1 {
     color: blue;

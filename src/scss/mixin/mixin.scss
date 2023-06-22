@@ -22,8 +22,11 @@ $sizes: 20, 30, 40;
     }
 }
 
+// if i make mixin i have to write include to use it 
+
 .mix {
     width: 200px;
     border-radius: double(10px);
     @include theme-colors(true)
 }
+

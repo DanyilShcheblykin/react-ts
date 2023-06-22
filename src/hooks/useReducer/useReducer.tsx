@@ -9,6 +9,7 @@ const initialState = {
 };
 
 const reducerFunc = (state: State, action: { type: string }) => {
+    console.log(state)
     switch (action.type) {
         case "add":
             return {amount: state.amount + 1 };

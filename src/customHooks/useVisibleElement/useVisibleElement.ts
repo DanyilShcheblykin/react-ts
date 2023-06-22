@@ -4,12 +4,12 @@ import React, { RefObject, useEffect, useRef, useState } from 'react'
 export const useVisibleElement = (callBack: (bool: boolean) => void, ref: RefObject<any>) => {
 
     const timout = useRef<NodeJS.Timeout>()
-    const [isVisible, setIsVisible] = useState()
-
+    
     useEffect(() => {
         const func = () => {
             const height = window.innerHeight
             const { top, bottom } = ref.current.getBoundingClientRect()
+            console.log(bottom)
             const isVisible = top < height && bottom > 0
 
             if (timout.current) {
@@ -17,7 +17,7 @@ export const useVisibleElement = (callBack: (bool: boolean) => void, ref: RefObj
             }
             timout.current = setTimeout(() => {
                 callBack(isVisible)
-            })
+            })    
         }
 
         func()

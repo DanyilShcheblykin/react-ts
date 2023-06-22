@@ -5,7 +5,6 @@ const useWindowResize = (callback: (width: number, height: number) => void, debo
     let timout = useRef<NodeJS.Timeout>()// нужно так что бы не было rerender , потому что когда мы меняем current не происходит rerender 
     useEffect(() => {
         const funcResize = () => {
-
             const { innerWidth, innerHeight } = window
             if (timout.current) {
                 clearTimeout(timout.current)

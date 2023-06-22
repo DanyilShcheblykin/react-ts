@@ -11,11 +11,11 @@ const UseRef = () => {
         if (ref.current) {
             ref.current.style.backgroundColor = "red"
             console.log(ref)//retrn object with key current
-
         }
     })
     const changeInputState = (e: React.ChangeEvent<HTMLInputElement>) => {
         // console.log(e)//SyntheticBaseEvent - это любые события в browser
+                        //SyntheticBaseEvent - any events in browser
         // console.log(e.target)//Dom elemnt 
         setState(e.target.value)
     }

@@ -5,12 +5,12 @@ const UseStateInterval = () => {
 
     useEffect(() => {
 
-        const interval = setInterval(() => {
+        const interval = setTimeout(() => {
             setState(prev => ++prev)
         }, 1000)
 
         return () => {
-            clearInterval // new interval is created and the previous interval is cleared each time the state changes.
+            clearTimeout(interval) // new interval is created and the previous interval is cleared each time the state changes.
         }
     }, [state])
 

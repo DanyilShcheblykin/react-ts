@@ -4,9 +4,6 @@ import {} from 'react'
 
 const FetchTask = () => {
 
-
-  
-
     return (
         <div>
 

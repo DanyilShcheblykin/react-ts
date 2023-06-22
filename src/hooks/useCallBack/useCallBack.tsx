@@ -5,17 +5,19 @@ function UseCallBack() {
     const [count, setCount] = useState(0);
     const [inputVal, setInputVal] = useState<string>('')
 
-    // тут что бы не было сборки handleClick при change inputVal обернули в useCallBack
+    //тут что бы не было сборки handleClick при change inputVal обернули в useCallBack
+    //prevent building handleClick when we change inputVal
 
     const handleClick = useCallback(() => {
-        // setCount(prev=> ++prev) вот так вот будет работаьь и без зависимости 
+        // setCount(prev=> ++prev) вот так вот будет работаь и без зависимости 
+        // like so will work and without dependencies
         setCount(() => {
-            console.log(count)
             return count + 1
         });
-    }, [count]);//если без зависимости будет работать только один раз так , а последующие разы не будет так как значение замкнулось на значени (0) 
+    }, []);//если без зависимости будет работать только один раз так , а последующие разы не будет так как значение замкнулось на значени (0) 
     // тут нужно обязательно ставить зависимость что бы всегда было обнавленное состояние 
-    
+    //if we use this varient without dep it wont work because value closed on 0
+
     return (
         <div>
             <p>Count: {count}</p>

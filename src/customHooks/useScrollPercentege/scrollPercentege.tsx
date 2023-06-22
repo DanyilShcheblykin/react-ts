@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 import './style.scss'
 import useScrollPercentage from './useScrollPercentage'
 
-
 const ScrollPercent = () => {
 
     const ref = useRef<HTMLDivElement>(null)
@@ -12,9 +11,7 @@ const ScrollPercent = () => {
         if(refmain.current){
             console.log(refmain.current.scrollHeight)
         }
-
     })
-
 
     useScrollPercentage((numb) => {
     console.log("numb : " + numb)
