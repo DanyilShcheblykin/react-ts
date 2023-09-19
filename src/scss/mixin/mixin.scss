@@ -6,11 +6,11 @@ $sizes: 20, 30, 40;
     }
 }
 
-@function double($pixel) {
+@function double($pixel) { //@function используется для создания функций, которые могут выполнять вычисления и возвращать значения. Эти функции могут использоваться для создания динамических стилей, например, для вычисления значений на основе входных параметров.
     @return $pixel * 2
 };
 
-@mixin theme-colors($light-theme) {
+@mixin theme-colors($light-theme) { //@mixin используется для создания набора стилей, которые могут быть повторно использованы в различных частях вашего стилевого файла.
     @if $light-theme {
         background-color: red;
         color: black;
@@ -22,11 +22,40 @@ $sizes: 20, 30, 40;
     }
 }
 
-// if i make mixin i have to write include to use it 
-
 .mix {
     width: 200px;
     border-radius: double(10px);
     @include theme-colors(true)
 }
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+  }
+  
+  /* Стиль для кнопок с закругленными углами */
+  .rounded {
+    border-radius: 5px;
+  }
+  
+  /* Применение наследования */
+  .my-button {
+    @extend .btn; /* Наследование стилей от .btn */
+    @extend .rounded; /* Наследование стилей от .rounded */
+  }
+  
+  /* Стиль для кнопки с другим цветом фона */
+  .another-button {
+    @extend .btn; /* Наследование стилей от .btn */
+    background-color: #e74c3c; /* Переопределение цвета фона */
+}
+  
+  
+  
+  
+  
+  
 

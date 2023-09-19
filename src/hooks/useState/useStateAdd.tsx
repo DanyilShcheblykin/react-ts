@@ -7,6 +7,7 @@ const UseStateAdd = () => {
         setState((state) => {
             return ++state
         })
+        console.log("kkk")
         setState(state + 1)// тут не будет срабатывать так как берется текущее значаение
     }
     return (
@@ -14,7 +15,6 @@ const UseStateAdd = () => {
             <h1>number :  {state}</h1>
             <button onClick={() => onClick()}>Add</button>
             <button onClick={onClick}>Add</button>
-
         </>
     )
 }

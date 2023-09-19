@@ -13,7 +13,7 @@ const useScrollPercentage = (callback: (percent: number) => void) => {
         }
         window.addEventListener("scroll", func)
         return () => {
-            window.addEventListener('scroll', func)
+            window.removeEventListener('scroll', func)
         }
     }, [])
 

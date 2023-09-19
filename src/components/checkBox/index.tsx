@@ -8,10 +8,7 @@ const CheckBox = () => {
                 <input type="checkbox" className='checkbox' />
                 <div className='check'></div>
             </label>
-
         </>
-
-
     );
 };
 

@@ -18,11 +18,16 @@ function UseCallBack() {
     // тут нужно обязательно ставить зависимость что бы всегда было обнавленное состояние 
     //if we use this varient without dep it wont work because value closed on 0
 
+    const setInp = (event:any)=>{
+        console.log(event)
+        setInputVal(event.target.value)
+    }
+
     return (
         <div>
             <p>Count: {count}</p>
             <button onClick={handleClick}>Increment</button>
-            <input onChange={(e) => setInputVal(e.target.value)}></input>
+            <input onChange={setInp}></input>
         </div>
     );
 }
