@@ -39,10 +39,11 @@ import Test from "./components/test/test";
 
 const App = () => {
 
+  const x = 10
 
 return(
  
-
+<div></div>
 )
 }
 
